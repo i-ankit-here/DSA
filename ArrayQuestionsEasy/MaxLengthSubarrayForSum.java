@@ -5,10 +5,10 @@ public class MaxLengthSubarrayForSum{
         int [] arr = {1,1,1,1,1,1,1,1};
         System.out.printf("Target of the sum: ");
         int k = in.nextInt();
-        int [] hash = new int[8];
+        int [] hash = new int[arr.length];
         int sum = 0;
         int maxLength=0;
-        for(int i=0;i<8;i++){
+        for(int i=0;i<arr.length;i++){
             sum+=arr[i];
             hash[i]=sum;
             if(sum==k){
