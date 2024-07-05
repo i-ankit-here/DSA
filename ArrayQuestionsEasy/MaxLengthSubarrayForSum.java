@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class MaxLengthSubarrayForSum{
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int [] arr = {1,2,3,1,1,1,1,2};
+        int [] arr = {1,1,1,1,1,1,1,1};
         System.out.printf("Target of the sum: ");
         int k = in.nextInt();
         int [] hash = new int[8];
@@ -15,8 +15,8 @@ public class MaxLengthSubarrayForSum{
                 maxLength=i+1;
             }
             for(int j=0;j<=i;j++){
-                if((sum-hash[j])==k){
-                    maxLength=i-j+1;
+                if((sum-hash[j])==k && (i-j)>maxLength){
+                    maxLength=i-j;
                     break;
                 }
             }
