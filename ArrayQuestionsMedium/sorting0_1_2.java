@@ -9,7 +9,7 @@ public class sorting0_1_2{
         int low=0;
         int mid=0;
         int high=arr.length;
-        while(mid<high){
+        while(mid<=high){
             if(arr[mid]==0){
                 swap(arr,low,mid);
                 low++; 
