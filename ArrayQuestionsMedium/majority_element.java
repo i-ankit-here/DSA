@@ -21,6 +21,7 @@ public class majority_element {
 
 
     // ******************** OPTIMAL SOLUTION ***************************
+    // Dutch National Flag Algorithm
     // Case when the majority element is always present
     // when it is not we need to use an extra loop to count the frequeny of elem at last and return it if is (>N/2)
     public static void main(String[] args) {
