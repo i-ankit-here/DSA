@@ -17,7 +17,7 @@ public class pascalTriangle {
     //         result = result * (r-i);
     //         result = result/(i+1);
     //     }
-    //     System.out.println(result);
+    //     System.out.println(result );
     // }
     public static void main(String[] args) {
         // get a particular element with given row and column
