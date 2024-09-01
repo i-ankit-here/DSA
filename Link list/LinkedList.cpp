@@ -19,7 +19,7 @@ void createList(Node *head)
 {
     Node *temp1;
     temp1 = head;
-    for (int i = 0; i < 1; i++)
+    for (int i = 0; i < 10; i++)
     {
         Node *temp;
         temp = new Node;
@@ -31,19 +31,16 @@ void createList(Node *head)
 }
 
 Node* reverseList(Node * head){
-    Node *prev,*curr,*nex;
-    prev = head;
-    curr = prev->next;
-    nex = curr->next;
-    while(curr->next!=NULL){
-        nex=curr->next;
-        curr->next=prev;
-        prev=curr;
-        curr = nex;
+    Node *prev,*curr;
+    prev = NULL;
+    curr = head;
+    while(curr!=NULL){
+        Node* temp = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = temp;
     }
-    curr->next = prev;
-    head->next = NULL;
-    return curr;    
+    return prev;    
 }
 
 void displayLsit(Node *head)
